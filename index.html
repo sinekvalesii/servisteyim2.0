@@ -435,10 +435,7 @@
                 try {
                     if (isLogin) {
                         // Login
-                        if (formData.phoneOrEmail === 'admin@admin.com') {
-                            setError('Admin hesabı bu ekrandan giriş yapamaz.');
-                            return;
-                        }
+                       
                         
                         const user = await db.getUserByPhoneOrEmail(formData.phoneOrEmail);
                         if (!user || user.password !== formData.password) {
